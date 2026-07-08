@@ -1,0 +1,377 @@
+-- ===== DASKER HUB - Orion V2 Library =====
+
+local OrionLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Backlostunking/ScriptLua/refs/heads/main/Orion-GB-V2.Lua"))()
+local executor = identifyexecutor and identifyexecutor() or getexecutorname and getexecutorname() or "غير معروف"
+
+-- ===== إنشاء النافذة =====
+local Window = OrionLib:MakeWindow({
+    Name = "Dasker Hub",
+    HidePremium = false,
+    SaveConfig = true,
+    ConfigFolder = "DaskerHub",
+    IntroEnabled = true,
+    IntroText = "Dasker Hub",
+    IntroIcon = "rbxassetid://132451295117674", 
+    KeyToOpenWindow = "RightShift",
+})
+-- ===== دالة إرسال إشعار =====
+local function Notify(title, content, time)
+    time = time or 3
+    OrionLib:MakeNotification({
+        Name = title,
+        Content = content,
+        Image = "rbxassetid://4483345998",
+        Time = time
+    })
+end
+
+local ScriptsTab = Window:MakeTab({
+    Name = "معلومات و المطور",
+    Icon = "rbxassetid://132451295117674", 
+    PremiumOnly = false
+})
+
+ScriptsTab:AddLabel("مرحبا بك في سكربت داسكر")
+ScriptsTab:AddLabel("TikTok: ghrky6")
+
+ ScriptsTab = Window:MakeTab({
+    Name = "📜 سكربتات 📜",
+    Icon = "rbxassetid://11857979634", 
+    PremiumOnly = false
+})
+
+
+ScriptsTab:AddParagraph("سكربتات جاهزة", "اختر السكربت المناسب")
+
+ScriptsTab:AddButton({Name = "سكربت Admin", Callback = function() Notify("Dasker system", "جاري التحميل...") loadstring(game:HttpGet("https://files.manuscdn.com/user_upload_by_module/session_file/310519663338783764/dmMPusHZfaBwFnzQ.lua"))() end})
+ScriptsTab:AddButton({Name = "Nokia Hub", Callback = function() Notify("Dasker system", "جاري التحميل...") loadstring(game:HttpGet("https://raw.githubusercontent.com/Ndora1/Ndora1/main/Nokia%20Hub.lua"))() end})
+ScriptsTab:AddButton({Name = "Infinite Yield", Callback = function() Notify("Dasker system", "جاري التحميل...") loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-infinite-yield-237486"))() end})
+ScriptsTab:AddButton({Name = "Auto Fling OP", Callback = function() Notify("Dasker system", "جاري التحميل...") loadstring(game:HttpGet("https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Auto%20Fling%20Player"))() end})
+ScriptsTab:AddButton({Name = "سكربت اندفاع", Callback = function() Notify("Dasker system", "جاري التحميل...") loadstring(game:HttpGet("https://pastefy.app/lZwY1Wr3/raw"))() end})
+ScriptsTab:AddButton({Name = "حاسب النقاط", Callback = function() Notify("Dasker system", "جاري التحميل...") loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-NO9AT-SAMLAT-47637"))() end})
+ScriptsTab:AddButton({Name = "حركات مشكوك فيها", Callback = function() Notify("Dasker system", "جاري التحميل...") loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Energize-Remake-23335"))() end})
+ScriptsTab:AddButton({Name = "شادر", Callback = function() loadstring(game:HttpGet("https://pastebin.com/raw/P1NgA165"))() end})
+ScriptsTab:AddButton({Name = "ادمن مزيف", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Reviz-3841"))() end})
+ScriptsTab:AddButton({Name = "فلينق جميع", Callback = function() loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Fe-fling-all-10553"))() end})
+ScriptsTab:AddButton({Name = "سكربت ماب بيوت", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-andx1F3E1RP-SanderX-Hub-15876"))() end})
+ScriptsTab:AddButton({Name = "سكربت MM2", Callback = function() loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-YARHM-12403"))() end})
+ScriptsTab:AddButton({Name = "سكربت رقدول", Callback = function() loadstring(game:HttpGet("https://scriptblox.com/raw/Ragdoll-Engine-BEST-SCRIPT-WORKING-SystemBroken-7544"))() end})
+ScriptsTab:AddButton({Name = "جودة سيئة", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-FPS-Booster-unlocker-14381"))() end})
+ScriptsTab:AddButton({Name = "رسم بالشات", Callback = function() loadstring(game:HttpGet("https://pastebin.com/raw/q6WWVCKC"))() end})
+ScriptsTab:AddButton({Name = "انميشنات غريبة", Callback = function() loadstring(game:HttpGet("https://pastebin.com/raw/1p6xnBNf"))() end})
+ScriptsTab:AddButton({Name = "كشف اماكن", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Tha-Bronx-2-Easy-ESP-Script-12540"))() end})
+ScriptsTab:AddButton({Name = "سيارة مخفية", Callback = function() loadstring(game:HttpGet("https://pastefy.app/0CS5vmly/raw"))() end})
+ScriptsTab:AddButton({Name = "كرة مخفية", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Fe-ball-rolL-9835"))() end})
+ScriptsTab:AddButton({Name = "مشي على حائط", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Wall-Walk-9153"))() end})
+ScriptsTab:AddButton({Name = "Arceus X مزيف", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/Arceus%20X%20V3"))() end})
+ScriptsTab:AddButton({Name = "ادمن", Callback = function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Nameless-Admin-Official-15022"))() end})
+ScriptsTab:AddButton({Name = "Rejoin", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/GGH52lan/GGH52lan/main/Rejoin_Button.txt"))() end})
+ScriptsTab:AddButton({Name = "قول بدون حظر", Callback = function() loadstring(game:HttpGet("https://pastebin.com/raw/Wqxzdi1q"))() end})
+ScriptsTab:AddButton({Name = "اختراق الشات", Callback = function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Obunga-666/B/refs/heads/main/Bypass%20filter%20chat%20Arabic"))() end})
+ScriptsTab:AddButton({Name = "كيبورد", Callback = function() loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Keyboard-moblie-script-13317"))() end})
+
+ScriptsTab:AddParagraph("سكربت تغير سماء عندك")
+
+ScriptsTab:AddButton({
+    Name = "تغير سماء",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://pastefy.app/3AXuG28j/raw"))()
+    end
+})
+
+ScriptsTab = Window:MakeTab({
+    Name = "سكربتاتFe",
+    Icon = "rbxassetid://6909151883", 
+    PremiumOnly = false
+})
+
+ TextTab = Window:MakeTab({
+    Name = "سكربتات صمــله",
+    Icon = "rbxassetid://11857979634", 
+    PremiumOnly = false
+})
+
+TextTab:AddParagraph("سكربتات صمله قويه 💪🏿")
+
+TextTab:AddButton({
+    Name = "VR7 Script",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/VR7ss/OMK/refs/heads/main/VR7-ON-TOP"))()
+    end
+})
+
+TextTab:AddButton({
+    Name = "Ghost Hub",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Original-ghosthub-59815"))()
+    end
+})
+
+TextTab:AddButton({
+    Name = "سكربت فلينق لمس",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet('https://pastebin.com/raw/TXMNj1yy'))()
+    end
+})
+TextTab:AddButton({
+    Name = "سكربت اغاني فقط اذا كان عندك قيمباس",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-R4D-script-no-key-17562"))()
+    end
+    })
+    TextTab:AddButton({
+    Name = "سكربت زيو مره قوي",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-ZEO-HUB-39924"))()
+    end
+    })
+    TextTab:AddButton({
+    Name = "سكربت REX ",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-REXM-206004"))()
+    end
+    })
+    TextTab:AddButton({
+    Name = "Sander XY",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Sander-XY-35845"))()
+    end
+    })
+    
+    TextTab:AddButton({
+    Name = "Real hub",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...")
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Brookhaven-RP-Rael-Hub-58126"))()
+    end
+})
+
+TextTab:AddButton({
+    Name = "ice hub is back",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/NewIceHub/BrookhavenRP/refs/heads/main/Source.lua"))()
+    end
+})
+
+
+OrionLib:Init()
+
+OrionLib:MakeNotification({
+    Name = "Dasker Hub",
+    Content = "تم تحميل اقوي سكربت هوب",
+    Image = "rbxassetid://9117914818",  
+    Time = 5
+})
+
+-- ===== تشغيل الصوت =====
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://9086208751"  
+sound.Volume = 1
+sound.Parent = workspace
+sound:Play()
+game:GetService("Debris"):AddItem(sound, sound.TimeLength + 1)
+
+print("✅ Dasker Hub Loaded!")
+print("Executor: " .. executor) 
+
+ TextTab = Window:MakeTab({
+    Name = "مضادات",
+    Icon = "rbxassetid://11857979634", 
+    PremiumOnly = false
+})
+TextTab:AddParagraph("مضادات")
+
+TextTab:AddButton({
+    Name = "مضاد فلينق",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Anti-fling-CoiledTom-121863"))()
+    end
+})
+
+TextTab:AddButton({
+    Name = "مضاد Afk",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/hassanxzayn-lua/Anti-afk/main/antiafkbyhassanxzyn"))()
+    end
+})
+ 
+TextTab:AddButton({
+    Name = "مضاد كلشيء",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Gaze-Anti-Bypass-but-Kind-of-Better-29119"))()
+    end
+})
+
+TextTab:AddButton({
+    Name = " مضاد بانق ",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...")
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Anti-Bang-48256"))()
+    end
+})
+
+TextTab:AddButton({
+    Name = " مضاد فلينق جديد ",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...")
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Anti-fling-73205"))()
+    end
+})
+ TextTab = Window:MakeTab({
+    Name = "حياة سجن",
+    Icon = "rbxassetid://11857979634", 
+    PremiumOnly = false
+})
+TextTab:AddParagraph("حياة سجن")
+
+TextTab:AddButton({
+    Name = "سكربت قط ",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/zenss555a/script/refs/heads/main/Prison-Life.lua"))()
+    end
+})
+
+TextTab:AddButton({
+    Name = "سكربت حياة سجن غالب انه ماراح اشتغل",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Prison-Life-Silent-Aim-62138"))()
+    end
+})
+
+ TextTab = Window:MakeTab({
+    Name = "سكربتاتmm2 💪🏿",
+    Icon = "rbxassetid://11857979634", 
+    PremiumOnly = false
+})
+TextTab:AddParagraph("سكربتاتmm2 💪🏿")
+
+TextTab:AddButton({
+    Name = "سكربت PhantomX",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Timebomb-Duels-Alpha-PhantomX-47124"))()
+    end
+})
+
+TextTab:AddButton({
+    Name = "سكربت Overdrive",
+    Callback = function()
+      Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Overdrive-h-125904"))()
+    end
+})
+
+TextTab:AddButton({
+    Name = "سكربت Foxname",
+    Callback = function()
+      Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/xv3gasx/Murder-Mystery-2/refs/heads/main/Release.lua"))()
+    end
+})
+ PlayerTab = Window:MakeTab({
+    Name = "لاعب محلي",
+    Icon = "rbxassetid://127005316401507", 
+    PremiumOnly = false
+})
+
+PlayerTab:AddParagraph("خصائص اللاعب", "غيّر السرعة والقفز والجاذبية")
+
+PlayerTab:AddTextbox({
+    Name = "🚶 سرعة المشي",
+    Default = "16",
+    TextDisappear = false,
+    Callback = function(Value)
+        local Humanoid = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+        if Humanoid then
+            Humanoid.WalkSpeed = tonumber(Value) or 16
+        end
+    end
+})
+
+PlayerTab:AddTextbox({
+    Name = "🦘 قوة القفز",
+    Default = "50",
+    TextDisappear = false,
+    Callback = function(Value)
+        local Humanoid = game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
+        if Humanoid then
+            Humanoid.JumpPower = tonumber(Value) or 50
+        end
+    end
+})
+
+PlayerTab:AddTextbox({
+    Name = "🌍 الجاذبية",
+    Default = "196.2",
+    TextDisappear = false,
+    Callback = function(Value)
+        workspace.Gravity = tonumber(Value) or 196.2
+    end
+})
+PlayerTab:AddButton({
+    Name = "سكربت مشيات fe",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-AFEM-Max-Open-Alpha-50210"))()
+    end
+})
+
+PlayerTab:AddButton({
+    Name = "سكربت fly v3",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+      loadstring(game:HttpGet("https://pastefy.app/M0N30XXG/raw"))();
+    end
+})
+
+PlayerTab:AddButton({
+    Name = "سكربت طياران من داسكر",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+      loadstring(game:HttpGet("https://pastebin.com/raw/csYjyYGb"))()
+    end
+})
+
+PlayerTab:AddButton({
+    Name = "سكربت طفو",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Float'))()
+    end
+})
+
+TextTab = Window:MakeTab({
+    Name = "المنفذون",
+    Icon = "rbxassetid://9117914818", 
+    PremiumOnly = false
+})
+
+TextTab:AddButton({
+    Name = "منفذ Cubix",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Cubix-17013"))()
+    end
+})
+
+TextTab:AddButton({
+    Name = "سكربت فيه جميع منافذ",
+    Callback = function()
+        Notify("Dasker system", "جاري التحميل...", 3)
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Tiger-hub-x-v4-42180"))()
+    end
+})
